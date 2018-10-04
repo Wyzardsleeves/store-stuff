@@ -81,6 +81,9 @@ class App extends Component {
     return (
       <div className="App">
         <div>
+          <a href="https://github.com/Wyzardsleeves/store-stuff/blob/master/src/App.js" target="_blank"><h5>Find on Github</h5></a>
+        </div>
+        <div>
           <h2>Store</h2>
           <ul>
             {this.state.items.map((stuff) =>
