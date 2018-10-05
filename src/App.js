@@ -49,32 +49,20 @@ class App extends Component {
     /* change location to Store */
     e.preventDefault();
     console.log('sendToStore is working on ' + item.name);
-    let newItem = {
-      id: item.id,
-      name: item.name,
-      loc: "store"
-    }
-    let list = [...this.state.items];
-    var index = list.indexOf(item);
-    console.log(index);
-    list.splice(index, 1, newItem);
-    this.setState({items: list}, console.log('sent to store!' , list));
+
+    this.setState((prevState) => ({
+      items: prevState.items.map((i) => ( i.id === item.id ? { ...i, loc: "store" } : i ))
+    }))
   }
 
   sendToCart(e, item){
     /* change location to Cart */
     e.preventDefault();
     console.log('sendToCart is working on ' + item.name);
-    let newItem = {
-      id: item.id,
-      name: item.name,
-      loc: "cart"
-    }
-    let list = [...this.state.items];
-    var index = list.indexOf(item);
-    console.log(index);
-    list.splice(index, 1, newItem);
-    this.setState({items: list}, console.log('sent to cart!' , list));
+
+    this.setState((prevState) => ({
+      items: prevState.items.map((i) => ( i.id === item.id ? { ...i, loc: "cart" } : i ))
+    }))
   }
 
   render() {
