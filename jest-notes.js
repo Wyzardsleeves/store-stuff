@@ -23,3 +23,14 @@ describe('What is being tested', () => {
     expect(component).toHaveLength(1);
   })
 })
+
+//testing methods (https://jestjs.io/docs/en/using-matchers)
+expect(somethingHere).toBe(#)         //check for value
+expect(somethingHere).toHaveLength(#) //check for length
+expect(somethingHere).toEqual(#)      //check for equality
+expect(somethingHere).not.toBe(#)     //check for not having value of
+expect(somethingHere).toBeNull();     //checks for something to be null
+expect(somethingHere).toBeDefined();  //checks for defined
+expect(somethingHere).not.toBeUndefined();  //checks for not undefined
+expect(somethingHere).not.toBeTruthy(); //checks for not truthy
+expect(somethingHere).toBeFalsy();    //checks for false
